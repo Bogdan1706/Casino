@@ -64,6 +64,7 @@ ul {
    height: 8.62px;
    background-image: url(../images/header/icon/Icon.png);
    cursor:pointer ;
+   z-index: 1;
 }
 
 .header-line {
@@ -351,6 +352,7 @@ ul {
    border: none;
    background: linear-gradient(to right, #eebb52, #f2ed70, #eebb52);
    box-shadow: 0px 4px 0px 0px #a48426 ;
+   cursor: pointer;
 }
 
 /* conditions */
@@ -491,8 +493,93 @@ ul {
 }
 
 .partners-img {
-   
+
    width: 218px;
    height: 102px;
+}
+
+/* reviews  */
+.page-line{
+   margin-left: -159px;
+   width: 1920px;
+   border-top: 1px solid #ffffff2c;
+} 
+.reviews {
+   width: 100%;
+   position: absolute;
    
+}
+
+.reviews-title__text {
+   color: #FFF;
+   font-size: 50px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-transform: uppercase;
+   margin-bottom: 76px;
+}
+
+.reviews-content {
+   /* width: 100 vh; */
+   display: flex;
+   justify-content: center;
+}
+
+.reviews-screen {
+   width: 1056px;
+   height: 393px;
+   border: 2px solid #f0ac52;
+}
+
+.reviews-header {
+   border: 2px solid #f0ac52;
+}
+
+.reviews-header__svgpointer {
+   margin-top: 20px;
+   margin-left: 47px;
+   margin-bottom: 20px;
+}
+
+.reviews-logo {
+   display: flex;
+   margin-top: 40px;
+   margin-left: 47px;
+   margin-bottom: 36px;
+}
+
+.reviews-logo__img {
+  margin-right: 20px;
+}
+
+.reviews-info__title {
+   color: #FFF;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 145%; /* 23.2px */
+}
+
+.reviews-info__profile {
+   color: #989898;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 145%; /* 23.2px */
+}
+
+.reviews-comment {
+   display: flex;
+}
+
+.reviews-message {
+   width: 785px;
+   margin-left: -136px;
+   background-color: #fff;
+   padding: 42px 48px 41px 49px;
+}
+
+.reviews-message__text {
+   width: 688px;
 }
