@@ -1,6 +1,7 @@
-/* :root {
-   --gold-priorites: linear-gradient(#efbd53 31%, #efbd53 9%, #0e0b05 0.55%)
-} */
+:root {
+   --gold: linear-gradient(to right,#eebb52, #f2ed70, #eebb52);
+   --gold-priorites:linear-gradient(180deg, rgba(239, 189, 83, 0.31) -11.48%, rgba(239, 189, 83, 0.09) 81.21%, rgba(14, 11, 5, 0.01) 173.89%)
+}
 @font-face {
    font-family: Montserrat;
    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
@@ -14,6 +15,11 @@ body {
 ul {
    padding: 0;
    margin: 0;
+}
+
+.button-color {
+   background: var(--gold);
+   box-shadow: 0px 4px 0px 0px #a48426 ;
 }
 .page {
    width: 1920px;
@@ -33,7 +39,6 @@ ul {
    display: flex;
    align-items: center;
    justify-content: end;
-   /* height: 77.54px; */
 }
 
 .header-languageselection {
@@ -76,13 +81,14 @@ ul {
 
 .header-btn {
    display: flex;
-   /* margin-right: 159.67px; */
+   
 }
 
 .header-btn__color {
-   background: linear-gradient(to right, #eebb52, #f2ed70, #eebb52);
+   background: var(--gold);
    border: solid 1.85px #f0ac52;
 }
+
 
 .header-btn__login {
    width: 182.15px;
@@ -208,8 +214,6 @@ ul {
    line-height: 24.38px;
    text-transform: uppercase;
    border: none;
-   background: linear-gradient(to right, #eebb52, #f2ed70, #eebb52);
-   box-shadow: 0px 4px 0px 0px #a48426 ;
    cursor: pointer;
 }
 
@@ -315,7 +319,7 @@ ul {
    height: 318px;
    border-radius: 20px;
    border: 1px solid #F0AC52;
-   background: var(--gold-priorites, linear-gradient(180deg, rgba(239, 189, 83, 0.31) -11.48%, rgba(239, 189, 83, 0.09) 81.21%, rgba(14, 11, 5, 0.01) 173.89%));
+   background: var(--gold-priorites);
 }
 
 .advantages-item__icon {
@@ -350,8 +354,6 @@ ul {
    line-height: 24.38px;
    text-transform: uppercase;
    border: none;
-   background: linear-gradient(to right, #eebb52, #f2ed70, #eebb52);
-   box-shadow: 0px 4px 0px 0px #a48426 ;
    cursor: pointer;
 }
 
@@ -373,11 +375,7 @@ ul {
    border-radius: 50px;
    backdrop-filter: blur(10px);
    background-color: #ffffff0c;
-   /* fill: rgba(255, 255, 255, 0.10);
-   stroke-width: 1px;
-   stroke: #F0AC52;
-   -webkit-backdrop-filter: blur(18px);
-   backdrop-filter: blur(18px); */
+   
 }
 
 .conditions-title__text {
@@ -398,8 +396,11 @@ ul {
    width: 420px;
    height: 239px;
    border: 1px solid #fff;
-   border-radius: 20px;
 
+   border-radius: 20px;
+   margin-right: 35px;
+   margin-bottom: 30px;
+   list-style-type: none;
 }
 
 .conditions-card {
@@ -410,13 +411,6 @@ ul {
    justify-content:center;
 }
 
-.conditions-item {
-   margin-right: 35px;
-   margin-bottom: 30px;
-   list-style-type: none;
-
-}
-
 .conditions-decortext {
    text-align: center;
    font-size: 50px;
@@ -424,7 +418,7 @@ ul {
    font-weight: 600;
    line-height: normal;
    text-transform: uppercase;
-   background: var(--gold-priorites, linear-gradient(180deg, rgba(239, 189, 83, 0.31) -11.48%, rgba(239, 189, 83, 0.09) 81.21%, rgba(14, 11, 5, 0.01) 173.89%));
+   background: var(--gold-priorites);
    background-clip: text;
    -webkit-text-stroke: 0.8px #F0AC52;
    -webkit-background-clip: text;
@@ -499,11 +493,7 @@ ul {
 }
 
 /* reviews  */
-.page-line{
-   margin-left: -159px;
-   width: 1920px;
-   border-top: 1px solid #ffffff2c;
-} 
+
 .reviews {
    width: 100%;
    position: relative;
@@ -533,7 +523,7 @@ ul {
 }
 
 .reviews-header {
-   border: 2px solid #f0ac52;
+   border-bottom: 2px solid #f0ac52;
 }
 
 .reviews-header__svgpointer {
@@ -576,7 +566,6 @@ ul {
 .reviews-message {
    position: relative;
    width: 785px;
-   /* height: 267px; */
    margin-left: -136px;
    background-color: #fff;
    padding: 42px 48px 41px 49px;
@@ -613,8 +602,13 @@ ul {
    justify-content:space-between;
 }
 
-.reviews-arrows__right {
+.reviews-arrows__link-left{
+   z-index: 1;
+}
+
+.reviews-arrows__link-right {
    margin-top: 25px;
+   z-index: 1;
 }
 
 .reviews-backgroundpicture {
@@ -629,6 +623,7 @@ ul {
    position: absolute;
    bottom: -79px;
    right: -176px;
+   z-index: 0;
 }
 
 /* footer  */
@@ -673,8 +668,6 @@ ul {
    line-height: normal;
    text-transform: uppercase;
    border: none;
-   background: linear-gradient(to right, #eebb52, #f2ed70, #eebb52);
-   box-shadow: 0px 4px 0px 0px #a48426 ;
    cursor: pointer;
 }
 
