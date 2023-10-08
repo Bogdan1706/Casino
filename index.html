@@ -6,22 +6,36 @@
    <title>Csino</title>
    <link rel="stylesheet" href="./style/normalize.css">
    <link rel="stylesheet" href="style/style.css">
+   <!-- <link rel="stylesheet" href="./style/modal.css" -->
 </head>
 <body>
-   <div class="page">
+   <div id="page" class="page">
       <div class="page-container">
          <header class="header">
             <div class="header-container">
-               <div class="header-languageselection">
+               <!-- <div class="header-languageselection">
                   <div class="header-languageselection__img"></div>
                   <div class="header-languageselection__block">
                      <div class="header-languageselection__block-text">ru</div>
                      <div class="header-languageselection__block-icon"></div>
                   </div>
-               </div>
+               </div> -->
+
+               <ul class="header-languageselection">
+                  <li class="languagese-item">
+                     <a href="#" class="languagese-link">
+                        <div class="header-languageselection__img"></div>
+                        <div class="header-languageselection__block-text">ru</div>
+                        <div class="header-languageselection__block-icon"></div>
+                     </a>
+                  </li>
+                  <li class="languagese-item">
+                     
+                  </li>
+               </ul>
                <div class="header-line"></div>
                <div class="header-btn">
-                  <div class="header-btn__login header-btn__color ">
+                  <div class="header-btn__login header-btn__color" id="login">
                      <p class="header-btn__login-text">Вход</p>
                   </div>
                   <div class="header-btn__registration header-btn__color">
@@ -31,7 +45,7 @@
             </div>
          </header>
          <div class="page-content">
-            <section class="concept">
+            <section id="concept", class="concept">
                <div class="concept-baner">
                   <img src="./images/baner/pngwing 2.png" alt="pngwing" class="imgcasino">
                   <img src="./images/baner/Ellipse 4.png" alt="ellipse4" class="imgellipse4">
@@ -85,7 +99,7 @@
                   </li>
                </ul>
                <div class="advantages-btn">
-                  <button class="advantages-btn__join button-color">Вступить</button>
+                  <button id="join" class="advantages-btn__join button-color">Вступить</button>
                </div>
                <img src="./images/advantages/pngwing 4.png" alt="pngwing" class="playing-cardsup">
             </section>
@@ -262,5 +276,7 @@
          </div>
       </div>
    </div>
+
+   <script src="modal.js"></script>
 </body>
 </html>
