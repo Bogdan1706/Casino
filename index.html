@@ -21,16 +21,27 @@
                   </div>
                </div> -->
 
-               <ul class="header-languageselection">
-                  <li class="languagese-item">
-                     <a href="#" class="languagese-link">
-                        <div class="header-languageselection__img"></div>
+               <ul id="selection" class="header-languageselection">
+                  <li id="item-ru" class="language-item language-item--active">
+                     <a href="#" class="language-link">
+                        <div class="header-languageselection__img header-languageselection__img--flag-ru"></div>
                         <div class="header-languageselection__block-text">ru</div>
-                        <div class="header-languageselection__block-icon"></div>
+                        <div id="triangle-ru" class="header-languageselection__icon-down"></div>
                      </a>
                   </li>
-                  <li class="languagese-item">
-                     
+                  <li id="item-en" class="language-item  language-item--hide">
+                     <a href="#" class="language-link">
+                        <div class="header-languageselection__img header-languageselection__img--flag-en"></div>
+                        <div class="header-languageselection__block-text">en</div>
+                        <div id="triangle-en" class="header-languageselection__icon-down"></div>
+                     </a>
+                  </li>
+                  <li id="item-cn" class="language-item language-item--hide">
+                     <a href="#" class="language-link">
+                        <div class="header-languageselection__img header-languageselection__img--flag-cn "></div>
+                        <div class="header-languageselection__block-text">cn</div>
+                        <div id="triangle-cn" class="header-languageselection__icon-down"></div>
+                     </a>
                   </li>
                </ul>
                <div class="header-line"></div>
@@ -278,5 +289,6 @@
    </div>
 
    <script src="modal.js"></script>
+   <script src="languag.js"></script>
 </body>
 </html>
