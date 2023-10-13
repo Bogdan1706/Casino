@@ -77,7 +77,7 @@ a {
    z-index: 2;
 }
 
-.language-item--open-ru {
+/* .language-item--open-ru {
    position: absolute;
    top: 0;
    left: 0;
@@ -85,7 +85,7 @@ a {
    transition: transform .5s ease-in;
    z-index: 1;
    
-}
+} */
 
 .language-item--open-up {
    position: absolute;

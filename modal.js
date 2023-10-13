@@ -41,5 +41,5 @@ btnJoin.addEventListener('click', () => {
 
 btnCloseJoin.addEventListener('click', () => {
    modalJoin.style.display = 'none'
-   page.classList.add('page--noscrol')
+   page.classList.remove('page--noscrol')
 })
