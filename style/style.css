@@ -84,18 +84,8 @@ a {
    transform: translateY(48px);
    transition: transform .5s ease-in;
    z-index: 1;
-   /* opacity: 1; */
+   
 }
-
-/* .language-item--hide {
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-   z-index: 1; 
-   transform: translateY(0px);
-   transition: transform 0.5s ease-out;
-} */
 
 .language-item--open-up {
    position: absolute;
@@ -123,15 +113,6 @@ a {
    transform: translateY(0px);
    transition: transform 0.5s ease-out;
 }
-
-/* .language-item--hide-cn {
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-   transform: translateY(0px);
-   transition: transform 1s ease-out;
-} */
 
 .language-link {
    display: flex;
@@ -752,13 +733,13 @@ a {
    height: 639px;
    position: absolute;
    top: 33px;
-   right: -178px;
+   right: -159px;
 }
 
 .reviews-backgroundligth {
    position: absolute;
    bottom: -79px;
-   right: -176px;
+   right: -158px;
    z-index: 0;
 }
 
