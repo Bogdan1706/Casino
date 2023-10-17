@@ -39,7 +39,7 @@
                <div class="header-line"></div>
                <div class="header-btn">
                   <div class="header-btn__login header-btn__color" id="btn-entry">
-                     <p id="login-text" class="header-btn__login-text">Вход</p>
+                     <p id="btn__login-text" class="header-btn__login-text">Вход</p>
                   </div>
                   <div id="modal-entry" class="modal-entry">
                      <div id="modal-overlay"  class="modal-overlay">
@@ -73,7 +73,7 @@
                      </div> 
                   </div>
                   <div id="btn-register" class="header-btn__registration header-btn__color">
-                     <p class="header-btn__registration-text">Регистрация</p>
+                     <p id="btn__registration-text" class="header-btn__registration-text">Регистрация</p>
                   </div> 
                   <div id="modal-registration" class="modal-registration">
                      <div id="modal-overlay" class="modal-overlay">
@@ -126,10 +126,14 @@
                   <img src="./images/baner/Ellipse 6.png" alt="ellipse6" class="imgellipse6">
                   <div class="concept-info">
                      <div class="concept-title">
-                        <h1 class="concept-title__exclusive"><span class="concept-title__text-color">Эксклюзивная</span><br>партнерская программа</h1>
-                        <h3 class="concept-title__proposal">Мы предлагаем выгодные индивидуальные условия.<br> Регистрируйтесь и зарабатывайте вместе с нами</h3>
+                        <h1 id="concept-title__up" class="concept-title__exclusive  title--color">Эксклюзивная </h1>
+                        <h1 id="concept-title__down" class="concept-title__exclusive "> партнерская программа</h1>
                      </div>
-                     <button class="concept-btn button-color">Присоединиться</button>
+                     <div class="concept-text">
+                        <p class="concept-text__proposal">Мы предлагаем выгодные индивидуальные условия.</p>
+                        <p class="concept-text__proposal">Регистрируйтесь и зарабатывайте вместе с нами.</p>
+                     </div>
+                     <button id="concept-btn" class="concept-btn button-color">Присоединиться</button>
                   </div>
                   <div class="concept-images">
                      <img src="./images/baner/iPhone XR Black 1.png" alt="phone" class="phone">
@@ -144,7 +148,10 @@
             </section>
             <section class="advantages">
                <img src="./images/advantages/Ellipse 4.png" alt="lighting" class="lighting">
-               <h2 class="advantages-title"><span class="advantages-title__color">Наши</span> преимущества</h2>
+               <div class="advantages-title">
+                  <h2 id="advantages-title__up" class=" advantages-title__text title--color ">Наши </h2>
+                  <h2 id="advantages-title__down" class="advantages-title__text"> преимущества</h2>
+               </div>
                <ul class="advantages-card">
                   <li class="advantages-item">
                      <img src="./images/advantages/stats 1.png" alt="statistics" class="advantages-item__icon">
@@ -218,22 +225,9 @@
             <section class="conditions">
                <img src="./images/conditions/pngwing 4.png" alt="pngwing" class="playing-cardsdown">
                <div class="conditions-content">
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1594" height="790" viewBox="0 0 1594 790" fill="none">
-                     <g filter="url(#filter0_b_27_214)">
-                       <path d="M0 60C0 26.8629 26.8629 0 60 0H1534C1567.14 0 1594 26.8629 1594 60V730C1594 763.137 1567.14 790 1534 790H60C26.8629 790 0 763.137 0 730V60Z" fill="white" fill-opacity="0.1"/>
-                       <path d="M0.5 60C0.5 27.1391 27.1391 0.5 60 0.5H1534C1566.86 0.5 1593.5 27.1391 1593.5 60V730C1593.5 762.861 1566.86 789.5 1534 789.5H60C27.1391 789.5 0.5 762.861 0.5 730V60Z" stroke="#F0AC52"/>
-                     </g>
-                     <defs>
-                       <filter id="filter0_b_27_214" x="-36" y="-36" width="1666" height="862" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                         <feFlood flood-opacity="0.1" result="BackgroundImageFix"/>
-                         <feGaussianBlur in="BackgroundImageFix" stdDeviation="18"/>
-                         <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_27_214"/>
-                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_27_214" result="shape"/>
-                       </filter>
-                     </defs>
-                  </svg> -->
                   <div class="conditions-title">
-                     <h2 class="conditions-title__text">условия<span class="conditions-title__text-color"> работа сра</span></h2>
+                     <h2 id="conditions-title__first" class="conditions-title__text ">условия</h2>
+                     <h2 id="conditions-title__second" class="conditions-title__text title--color">работа сра</h2>
                   </div>
                   <ul class="conditions-card">
                      <li class="conditions-item">
@@ -266,7 +260,7 @@
             </section>
             <section class="partners">
                <div class="partners-title">
-                  <h2 class="partners-title__text">парнеры</h2>
+                  <h2 id="partners-title__text" class="partners-title__text">парнеры</h2>
                </div>
                <ul class="partners-list">
                   <li class="partners-item">
@@ -325,10 +319,10 @@
                   </li>
                </ul>
             </section>
-            <!-- <div class="page-line"></div> -->
+           
             <section class="reviews">
                <div class="reviews-title">
-                  <h2 class="reviews-title__text">отзывы</h2>
+                  <h2 id="reviews-title__text" class="reviews-title__text">отзывы</h2>
                </div>
                <div class="reviews-content">
                   <div class="reviews-screen">
@@ -380,10 +374,10 @@
       </div>
       <div class="footer">
          <div class="footer-content">
-            <h2 class="footer-content__title">контакты</h2>
+            <h2 id="footer-content__title" class="footer-content__title">контакты</h2>
             <div class="footer-content__button">
-               <button class="footer-content__btn button-color">наш канал</button>
-               <button class="footer-content__btn button-color">связаться</button>
+               <button id="footer-btn__left" class="footer-content__btn button-color">наш канал</button>
+               <button id="footer-btn__right" class="footer-content__btn button-color">связаться</button>
             </div>
          </div>
       </div>

@@ -4,7 +4,8 @@
 :root {
    --gold: linear-gradient(to right,#eebb52, #f2ed70, #eebb52);
    --bg-modal: linear-gradient(45deg, #efbd53 31%, #efbd53 9%, #0e0b05 0.55%,) ;
-   --gold-priorites:linear-gradient(180deg, rgba(239, 189, 83, 0.31) -11.48%, rgba(239, 189, 83, 0.09) 81.21%, rgba(14, 11, 5, 0.01) 173.89%)
+   --gold-priorites:linear-gradient(180deg, rgba(239, 189, 83, 0.31) -11.48%, rgba(239, 189, 83, 0.09) 81.21%, rgba(14, 11, 5, 0.01) 173.89%);
+   --color-title: #f0ac52;
 }
 @font-face {
    font-family: Montserrat;
@@ -30,6 +31,9 @@ a {
    background: var(--gold);
    box-shadow: 0px 4px 0px 0px #a48426 ;
 }
+
+
+
 .page {
    width: 1920px;
    
@@ -278,6 +282,7 @@ a {
 }
 
 .concept-info {
+   width: 1348px;
    display: flex;
    flex-wrap: wrap;
    align-content: center;
@@ -285,29 +290,36 @@ a {
 
 .concept-title {
    margin-top: 88px;
-   margin-bottom: 83px;
+   margin-bottom: 25px;
+
 }
 
 .concept-title__exclusive {
    padding: 0;
    margin: 0;
-   margin-bottom: 20px;
    font-size: 70px;
    font-weight: 700;
    color: #fff;
    line-height: 85.33px;
 }
 
-.concept-title__text-color {
-   color: #f0ac52;
+.concept-title__exclusive.title--color,
+.advantages-title__text.title--color,
+.conditions-title__text.title--color {
+   color: var(--color-title);
 }
 
-.concept-title__proposal {
+.concept-text__proposal {
    margin: 0;
    font-size: 32px;
    font-weight: 500;
    color: #fff;
    line-height: 39.01px;
+   
+}
+
+.concept-text {
+   margin-bottom: 83px;
 }
 
 .concept-btn {
@@ -400,18 +412,25 @@ a {
    left: -161px;
 }
 
-
 .advantages-title {
- font-size: 50px;
- font-weight: 600;
- line-height: normal;
- text-transform: uppercase;
- color: #fff;
+   display: flex;
+   margin-bottom: 76px;
 }
 
-.advantages-title__color {
-   color: #f0ac52;
+.advantages-title__text {
+   padding: 0;
+   margin: 0;
+   margin-right: 10px  ;
+   font-size: 50px;
+   font-weight: 600;
+   line-height: normal;
+    text-transform: uppercase;
+   color: #fff;
 }
+
+/* .advantages-title__color {
+   color: #f0ac52;
+} */
 
 /* Карточки */
 
@@ -495,6 +514,11 @@ a {
    
 }
 
+.conditions-title {
+   display: flex;
+   justify-content: center;
+}
+
 .conditions-title__text {
    color: #fff;
    font-size: 50px;
@@ -502,12 +526,11 @@ a {
    line-height: normal;
    text-align: center;
    text-transform: uppercase;
+   margin-right: 10px;
    margin-bottom: 64px;
 }
 
-.conditions-title__text-color {
-   color: #F0AC52;
-}
+
 
 .conditions-item {
    width: 420px;
@@ -729,7 +752,7 @@ a {
 }
 
 .reviews-backgroundpicture {
-   width: 725px;
+   width: 580px;
    height: 639px;
    position: absolute;
    top: 33px;

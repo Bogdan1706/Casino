@@ -7,17 +7,76 @@ const selectItemEn = document.getElementById('item-en')
 const selectItemCn = document.getElementById('item-cn')
 
 triangleRu.style.opacity = "1"
-const loginText = document.querySelector('#login-text')
+
+const loginText = document.querySelector('#btn__login-text')
+const btnRrgistrationText = document.querySelector('#btn__registration-text')
+const conceptTitleUp = document.querySelector('#concept-title__up')
+const conceptTitleDown = document.querySelector('#concept-title__down')
+const conceptBtn = document.querySelector('#concept-btn')
+const advantagesTitleUp = document.querySelector("#advantages-title__up")
+const advantagesTitleDown = document.querySelector("#advantages-title__down")
+// const btnJoin = document.querySelector("#btn-join")
+const conditionsTitleFirst = document.querySelector("#conditions-title__first")
+const conditionsTitleSecond = document.querySelector("#conditions-title__second")
+const partnersTitleText = document.querySelector("#partners-title__text")
+const reviewsTitleText = document.querySelector("#reviews-title__text")
+const footerContentTitle = document.querySelector("#footer-content__title")
+const footerBtnLeft = document.querySelector("#footer-btn__left")
+const footerBtnRight = document.querySelector("#footer-btn__right")
+
 
 function translationItemRu () {
    loginText.textContent = "Вход"
-   let text = loginText.textContent 
-  
+   btnRrgistrationText.textContent = "Регистрация"
+   conceptBtn.textContent = "Присоединиться"
+   btnJoin.textContent = "Вступить"
+   conceptTitleUp.textContent = 'Эксклюзивная'
+   conceptTitleDown.textContent = "партнерская программа"
+   advantagesTitleUp.textContent = "Наши"
+   advantagesTitleDown.textContent = "преимущества"
+   conditionsTitleFirst.textContent = "условия"
+   conditionsTitleSecond.textContent = "работа сра"
+   partnersTitleText.textContent = "парнеры"
+   reviewsTitleText.textContent = "отзывы"
+   footerContentTitle.textContent = "контакты"
+   footerBtnLeft.textContent = "наш канал"
+   footerBtnRight.textContent = "связаться"
 }
 
 function translationItemCn () {
    loginText.textContent = "入口"
-   let text = loginText.textContent 
+   btnRrgistrationText.textContent = "登记注册"
+   conceptBtn.textContent = "加入"
+   btnJoin.textContent = "加入"
+   conceptTitleUp.textContent = "附属计划"
+   conceptTitleDown.textContent = "独家服务"
+   advantagesTitleUp.textContent = "我们的"
+   advantagesTitleDown.textContent = "优势"
+   conditionsTitleFirst.textContent = "条件"
+   conditionsTitleSecond.textContent = "注册会计师的工作"
+   partnersTitleText.textContent = "合作伙伴"
+   reviewsTitleText.textContent = "检讨报告"
+   footerContentTitle.textContent = "联络人"
+   footerBtnLeft.textContent = "我们的频道"
+   footerBtnRight.textContent = "联系我们"
+}
+
+function translationItemEn () {
+   loginText.textContent = "Entrance"
+   btnRrgistrationText.textContent = "Registration"
+   conceptBtn.textContent = "Join"
+   btnJoin.textContent = "Join"
+   conceptTitleUp.textContent = 'Exclusive'
+   conceptTitleDown.textContent = "affiliate program"
+   advantagesTitleUp.textContent = "Our"
+   advantagesTitleDown.textContent = "advantages"
+   conditionsTitleFirst.textContent = "conditions"
+   conditionsTitleSecond.textContent = "the work of the cpa"
+   partnersTitleText.textContent = "partners"
+   reviewsTitleText.textContent = "reviews"
+   footerContentTitle.textContent = "contacts"
+   footerBtnLeft.textContent = "our channel"
+   footerBtnRight.textContent = "contact"
   
 }
 
@@ -151,7 +210,7 @@ selectItemEn.addEventListener('click', () => {
          selectItemCn.classList.add('language-item--hide')
          selectItemCn.classList.remove('language-item--open-up')
          triangleCn.style.opacity = "0"
-
+         translationItemEn ()
       } else {
 
          selectItemEn.classList.add('language-item--active')
@@ -162,10 +221,10 @@ selectItemEn.addEventListener('click', () => {
          triangleRu.style.opacity = "0"
          selectItemCn.classList.add('language-item--hide')
          selectItemCn.classList.remove('language-item--active')
-         triangleEn.style.opacity = "0"
+         triangleCn.style.opacity = "0"
          triangleRu.classList.add('header-languageselection__icon-down')
          triangleRu.classList.remove('header-languageselection__icon-up')
-
+         translationItemEn ()
       }
      
    }else if ((triangleEn.style.opacity == "1") && (triangleEn.classList.contains('header-languageselection__icon-down'))) {
