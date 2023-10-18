@@ -8,76 +8,77 @@ const selectItemCn = document.getElementById('item-cn')
 
 triangleRu.style.opacity = "1"
 
-const loginText = document.querySelector('#btn__login-text')
-const btnRrgistrationText = document.querySelector('#btn__registration-text')
-const conceptTitleUp = document.querySelector('#concept-title__up')
-const conceptTitleDown = document.querySelector('#concept-title__down')
-const conceptBtn = document.querySelector('#concept-btn')
-const advantagesTitleUp = document.querySelector("#advantages-title__up")
-const advantagesTitleDown = document.querySelector("#advantages-title__down")
-// const btnJoin = document.querySelector("#btn-join")
-const conditionsTitleFirst = document.querySelector("#conditions-title__first")
-const conditionsTitleSecond = document.querySelector("#conditions-title__second")
-const partnersTitleText = document.querySelector("#partners-title__text")
-const reviewsTitleText = document.querySelector("#reviews-title__text")
-const footerContentTitle = document.querySelector("#footer-content__title")
-const footerBtnLeft = document.querySelector("#footer-btn__left")
-const footerBtnRight = document.querySelector("#footer-btn__right")
+let ru = 'ru', cn = 'cn', en = 'en'
 
-
-function translationItemRu () {
-   loginText.textContent = "Вход"
-   btnRrgistrationText.textContent = "Регистрация"
-   conceptBtn.textContent = "Присоединиться"
-   btnJoin.textContent = "Вступить"
-   conceptTitleUp.textContent = 'Эксклюзивная'
-   conceptTitleDown.textContent = "партнерская программа"
-   advantagesTitleUp.textContent = "Наши"
-   advantagesTitleDown.textContent = "преимущества"
-   conditionsTitleFirst.textContent = "условия"
-   conditionsTitleSecond.textContent = "работа сра"
-   partnersTitleText.textContent = "парнеры"
-   reviewsTitleText.textContent = "отзывы"
-   footerContentTitle.textContent = "контакты"
-   footerBtnLeft.textContent = "наш канал"
-   footerBtnRight.textContent = "связаться"
+const translations = {
+   ru: {
+      btnlog: "Вход",
+      btnregistration: "Регистрация",
+      concepttitleup: "Эксклюзивная",
+      concepttitledown:"партнерская программа",
+      concepttextup: "Мы предлагаем выгодные индивидуальные условия.",
+      concepttextdown:"Регистрируйтесь и зарабатывайте вместе с нами",
+      conceptbtn:"Присоединиться",
+      advantagestitleup: "Наши",
+      advantagestitledown: "преимущества",
+      btnjoin: "Вступить",
+      conditionstitlefirst: "условия",
+      conditionstitlesecond: "работа сра",
+      partnerstitletext: "парнеры",
+      reviewstitletext: "отзывы",
+      footercontenttitle:"контакты",
+      footerbtnleft: "наш канал",
+      footerbtnright:"связаться"
+   },
+   cn: {
+      btnlog: "入口",
+      btnregistration: "登记注册",
+      concepttitleup: "独家服务",
+      concepttitledown:"附属计划",
+      concepttextup: "我们提供有利的个人条件。",
+      concepttextdown:"登记及赚取",
+      conceptbtn:"加入",
+      advantagestitleup: "我们的",
+      advantagestitledown: "优势",
+      btnjoin: "加入",
+      conditionstitlefirst: "条件",
+      conditionstitlesecond: "立即工作",
+      partnerstitletext: "合作伙伴",
+      reviewstitletext: "检讨报告",
+      footercontenttitle:"联络人",
+      footerbtnleft: "我们的频道",
+      footerbtnright:"联系我们"
+   },
+   en: {
+      btnlog: "Entrance",
+      btnregistration: "Registration",
+      concepttitleup: "Exclusive",
+      concepttitledown:"affiliate program",
+      concepttextup: "We offer favorable individual conditions.",
+      concepttextdown:"Register and earn with us",
+      conceptbtn:"Join",
+      advantagestitleup: "Our",
+      advantagestitledown: "advantages",
+      btnjoin: "Join",
+      conditionstitlefirst: "conditions",
+      conditionstitlesecond: "work immediately",
+      partnerstitletext: "partners",
+      reviewstitletext: "reviews",
+      footercontenttitle:"contacts",
+      footerbtnleft: "our channel",
+      footerbtnright:"contact"
+   }
 }
 
-function translationItemCn () {
-   loginText.textContent = "入口"
-   btnRrgistrationText.textContent = "登记注册"
-   conceptBtn.textContent = "加入"
-   btnJoin.textContent = "加入"
-   conceptTitleUp.textContent = "附属计划"
-   conceptTitleDown.textContent = "独家服务"
-   advantagesTitleUp.textContent = "我们的"
-   advantagesTitleDown.textContent = "优势"
-   conditionsTitleFirst.textContent = "条件"
-   conditionsTitleSecond.textContent = "注册会计师的工作"
-   partnersTitleText.textContent = "合作伙伴"
-   reviewsTitleText.textContent = "检讨报告"
-   footerContentTitle.textContent = "联络人"
-   footerBtnLeft.textContent = "我们的频道"
-   footerBtnRight.textContent = "联系我们"
-}
-
-function translationItemEn () {
-   loginText.textContent = "Entrance"
-   btnRrgistrationText.textContent = "Registration"
-   conceptBtn.textContent = "Join"
-   btnJoin.textContent = "Join"
-   conceptTitleUp.textContent = 'Exclusive'
-   conceptTitleDown.textContent = "affiliate program"
-   advantagesTitleUp.textContent = "Our"
-   advantagesTitleDown.textContent = "advantages"
-   conditionsTitleFirst.textContent = "conditions"
-   conditionsTitleSecond.textContent = "the work of the cpa"
-   partnersTitleText.textContent = "partners"
-   reviewsTitleText.textContent = "reviews"
-   footerContentTitle.textContent = "contacts"
-   footerBtnLeft.textContent = "our channel"
-   footerBtnRight.textContent = "contact"
-  
+function selectLanguage (lang) {
+   let elements = document.querySelectorAll('[id]');
+   
+   for(let i = 0; i < elements.length; i++) {
+      let id = elements[i].id
+      if (id in translations[lang]) {
+         elements[i].textContent = translations[lang][id]
+      }
+   }
 }
 
 selectItemRu.addEventListener('click', () => {
@@ -97,7 +98,7 @@ selectItemRu.addEventListener('click', () => {
          selectItemCn.classList.remove('language-item--open-dw')
          selectItemCn.classList.add('language-item--hide')
          triangleEn.style.opacity = "0"
-         translationItemRu ()
+         selectLanguage (ru)
 
       } else {
 
@@ -112,7 +113,7 @@ selectItemRu.addEventListener('click', () => {
          selectItemEn.classList.remove('language-item--open-dw')
          selectItemEn.classList.add('language-item--hide')
          triangleEn.style.opacity = "0"
-         translationItemRu ()
+         selectLanguage (ru)
       }
    }else if ((triangleRu.style.opacity == "1")&&(triangleRu.classList.contains('header-languageselection__icon-down'))){
       
@@ -152,7 +153,7 @@ selectItemCn.addEventListener('click', () => {
          selectItemEn.classList.remove('language-item--open-dw')
          selectItemEn.classList.add('language-item--hide')
          triangleEn.style.opacity = "0"
-         translationItemCn ()
+         selectLanguage (cn)
       } else {
 
          selectItemCn.classList.add('language-item--active')
@@ -166,7 +167,7 @@ selectItemCn.addEventListener('click', () => {
          selectItemEn.classList.remove('language-item--active')
          selectItemEn.classList.add('language-item--hide')
          triangleEn.style.opacity = "0"
-         translationItemCn ()
+         selectLanguage (cn)
       }
    }else if ((triangleCn.style.opacity == "1") && (triangleCn.classList == 'header-languageselection__icon-down')) {
 
@@ -210,7 +211,7 @@ selectItemEn.addEventListener('click', () => {
          selectItemCn.classList.add('language-item--hide')
          selectItemCn.classList.remove('language-item--open-up')
          triangleCn.style.opacity = "0"
-         translationItemEn ()
+         selectLanguage (en)
       } else {
 
          selectItemEn.classList.add('language-item--active')
@@ -224,7 +225,7 @@ selectItemEn.addEventListener('click', () => {
          triangleCn.style.opacity = "0"
          triangleRu.classList.add('header-languageselection__icon-down')
          triangleRu.classList.remove('header-languageselection__icon-up')
-         translationItemEn ()
+         selectLanguage (en)
       }
      
    }else if ((triangleEn.style.opacity == "1") && (triangleEn.classList.contains('header-languageselection__icon-down'))) {

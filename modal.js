@@ -7,7 +7,7 @@ const btnRegister = document.querySelector('#btn-register')
 const modalRegister = document.querySelector('#modal-registration')
 const btnCloseRegister = document.querySelector('#close-registre')
 
-const btnJoin = document.querySelector('#btn-join')
+const btnJoin = document.querySelector('#btnjoin')
 const modalJoin = document.querySelector('#modal-join')
 const btnCloseJoin = document.querySelector('#close-join')
 const page = document.getElementById('page');

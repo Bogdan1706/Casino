@@ -401,6 +401,7 @@ a {
 }
 
 .lighting {
+   z-index: 0;
    position: absolute;
    top: -62px;
    left: -159px;
@@ -473,6 +474,7 @@ a {
 .advantages-btn {
    display: flex;
    justify-content: center;
+   
 }
 
 .advantages-btn__join {
@@ -485,6 +487,7 @@ a {
    text-transform: uppercase;
    border: none;
    cursor: pointer;
+   z-index: 1;
 }
 
 .advantages-btn__join:hover {
