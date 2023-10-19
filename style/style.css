@@ -669,11 +669,24 @@ a {
    border-bottom: 2px solid #f0ac52;
 }
 
-.reviews-header__svgpointer {
+.reviews-header__points {
+   display: flex;
    margin-top: 20px;
    margin-left: 47px;
    margin-bottom: 20px;
 }
+
+.reviews-header__points-indicator {
+   margin-right: 5px;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: #F0AC52;
+}
+
+.reviews-header__points-indicator.reviews-header__points-indicator--active {
+   background-color: #fcfbf9;
+}  
 
 .reviews-logo {
    display: flex;

@@ -331,16 +331,18 @@
                <div class="reviews-content">
                   <div class="reviews-screen">
                      <div class="reviews-header">
-                        <svg class="reviews-header__svgpointer" xmlns="http://www.w3.org/2000/svg" width="59" height="13" viewBox="0 0 59 13" fill="none">
-                           <circle cx="6.5" cy="6.5" r="6.5" fill="#F0AC52"/>
-                           <circle cx="29.5" cy="6.5" r="6.5" fill="#D9D9D9"/>
-                           <circle cx="52.5" cy="6.5" r="6.5" fill="#F0AC52"/>
-                         </svg>
+                        <div class="reviews-header__points">
+                           <div id="pointer" class="reviews-header__points-indicator"></div>
+                           <div id="pointer" class="reviews-header__points-indicator"></div>
+                           <div id="pointer" class="reviews-header__points-indicator"></div>
+                           <div id="pointer" class="reviews-header__points-indicator"></div>
+                           <div id="pointer" class="reviews-header__points-indicator"></div>
+                        </div>
                      </div>
                      <div class="reviews-logo">
-                        <img src="./images/reviews/image 23.png" alt="" class="reviews-logo__img">
+                        <img id="logo-img" src="./images/reviews/logo/1.png" alt="" class="reviews-logo__img">
                         <div class="reviews-info">
-                           <div class="reviews-info__title">Lucky online</div>
+                           <div id="logo-title" class="reviews-info__title">Adcomba</div>
                            <div class="reviews-info__profile">Официальный дилер компании</div>
                         </div>
                      </div>
@@ -350,22 +352,21 @@
                               <path d="M19.5 0H0V43.5L19.5 33V0Z" fill="#F0AC52"/>
                               <path d="M44.5 0H25V43.5L44.5 33V0Z" fill="#F0AC52"/>
                             </svg>
-                           <p class="reviews-message__text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellat consequatur deleniti fuga cum veritatis corporis explicabo, non tempora, dolorem minus ut excepturi provident mollitia alias! Obcaecati impedit doloribus consequuntur?
-                              Dolorem maxime quidem et nihil minima amet, fugiat atque, nobis eveniet aliquid quia natus blanditiis assumenda sapiente necessitatibus soluta illum unde, consequuntur sunt porro illo rerum.Dolorem maxime quidem et nihil minima amet, fugiat atque, nobis eveniet aliquid quia natus blanditiis assumenda sapiente necessitatibus soluta illum unde, consequuntur sunt porro illo rerum.  
+                           <p id="reviews-text" class="reviews-message__text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit.Iure repellat consequatur deleniti fuga cum veritatis corporis explicabo,non tempora, dolorem minus ut excepturi provident mollitia alias!Obcaecati impedit doloribus consequuntur?Dolorem maxime quidem et nihil minima amet, fugiat atque, nobis eveniet aliquid quia natus blanditiis assumenda sapiente necessitatibus soluta illum unde, consequuntur sunt porro illo rerum.Dolorem maxime quidem et nihil minima amet, fugiat atque, nobis eveniet aliquid quia natus blanditiis assumenda sapiente necessitatibus soluta illum unde, consequuntur sunt porro illo rerum.
                            </p>
                         </div>
-                        <img src="./images/reviews/16.png" alt="" class="reviews-img">
+                        <img id="reviews-img" src="./images/reviews/slider/1.png" alt="" class="reviews-img">
                      </div>
                   </div>
                </div>
                <div class="reviews-arrows">
-                  <a id="linkleft" class="reviews-arrows__link-left" href="#">
+                  <a id="link-left" class="reviews-arrows__link-left" href="#">
                      <svg  xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
                         <path d="M13.3603 25.2084L19.2728 19.273L16.0416 16.0417L4.58325 27.5001L16.0416 38.9584L19.2728 35.7272L13.3603 29.7917H50.4166V25.2084H13.3603Z" fill="white"/>
                      </svg>
                   </a>
-                  <a id="linkright" href="" class="reviews-arrows__link-right">
+                  <a id="link-right" href="" class="reviews-arrows__link-right">
                      <svg class="reviews-arrows__right" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
                         <path d="M41.6397 29.7915L35.7272 35.7269L38.9585 38.9582L50.4168 27.4998L38.9585 16.0415L35.7272 19.2728L41.6397 25.2082H4.5835V29.7915H41.6397Z" fill="white"/>
                      </svg>
@@ -387,6 +388,7 @@
       </div>
    </div>
 
+   <script src="messages.js"></script>
    <script src="modal.js"></script>
    <script src="languag.js"></script>
 </body>
