@@ -36,7 +36,7 @@ a {
 
 .page {
    width: 1920px;
-   
+  
 }
 
 .page--noscrol {
@@ -66,8 +66,6 @@ a {
    flex-direction: column;
    justify-content: center;
    
-   
-   
 }
 
 .language-item {
@@ -80,16 +78,6 @@ a {
    opacity: 1;
    z-index: 2;
 }
-
-/* .language-item--open-ru {
-   position: absolute;
-   top: 0;
-   left: 0;
-   transform: translateY(48px);
-   transition: transform .5s ease-in;
-   z-index: 1;
-   
-} */
 
 .language-item--open-up {
    position: absolute;

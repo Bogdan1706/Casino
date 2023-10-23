@@ -3,26 +3,27 @@ const linkRight = document.querySelector('#link-right')
 const pointer = document.querySelectorAll('#pointer')
 
 pointer[0].classList.add('reviews-header__points-indicator--active')
-function movePointRight (num) {
-   if(num == 0) {
-      pointer[pointer.length-1].classList.remove('reviews-header__points-indicator--active')
-      pointer[num].classList.add('reviews-header__points-indicator--active')
-   }else if (num > 0) {
-      pointer[num-1].classList.remove('reviews-header__points-indicator--active')
-      pointer[num].classList.add('reviews-header__points-indicator--active')
-   }
-}
 
-function movePointLeft (num) {
-   if(num == pointer.length-1) {
-      pointer[0].classList.remove('reviews-header__points-indicator--active')
-      pointer[pointer.length-1].classList.add('reviews-header__points-indicator--active')
+// function movePointRight (num) {
+//    if(num == 0) {
+//       pointer[pointer.length-1].classList.remove('reviews-header__points-indicator--active')
+//       pointer[num].classList.add('reviews-header__points-indicator--active')
+//    }else if (num > 0) {
+//       pointer[num-1].classList.remove('reviews-header__points-indicator--active')
+//       pointer[num].classList.add('reviews-header__points-indicator--active')
+//    }
+// }
+
+// function movePointLeft (num) {
+//    if(num == pointer.length-1) {
+//       pointer[0].classList.remove('reviews-header__points-indicator--active')
+//       pointer[pointer.length-1].classList.add('reviews-header__points-indicator--active')
    
-   }else if (num < pointer.length-1) {
-      pointer[num].classList.add('reviews-header__points-indicator--active')
-      pointer[num+1].classList.remove('reviews-header__points-indicator--active')
-   }
-}
+//    }else if (num < pointer.length-1) {
+//       pointer[num].classList.add('reviews-header__points-indicator--active')
+//       pointer[num+1].classList.remove('reviews-header__points-indicator--active')
+//    }
+// }
 
 const message = {
    dealer: [
@@ -72,7 +73,14 @@ const message = {
          this.elementary = this.dealer.length - 1
       }
       this.set(this.dealer[this.elementary]["logoTitle"],this.dealer[this.elementary]["logoImg"],this.dealer[this.elementary]["textMessage"],this.dealer[this.elementary]["imgMessage"])
-      movePointLeft (this.elementary)     
+      // movePointLeft (this.elementary)    
+      if(this.elementary == pointer.length-1) {
+         pointer[0].classList.remove('reviews-header__points-indicator--active')
+         pointer[pointer.length-1].classList.add('reviews-header__points-indicator--active')    
+      }else if (this.elementary < pointer.length-1) {
+         pointer[this.elementary].classList.add('reviews-header__points-indicator--active')
+         pointer[this.elementary+1].classList.remove('reviews-header__points-indicator--active')
+      } 
    },
 
    right: function () {
@@ -81,7 +89,14 @@ const message = {
          this.elementary = 0;
       }   
       this.set(this.dealer[this.elementary]["logoTitle"],this.dealer[this.elementary]["logoImg"],this.dealer[this.elementary]["textMessage"],this.dealer[this.elementary]["imgMessage"])
-      movePointRight (this.elementary)  
+      // movePointRight (this.elementary)  
+      if(this.elementary == 0) {
+         pointer[pointer.length-1].classList.remove('reviews-header__points-indicator--active')
+         pointer[this.elementary].classList.add('reviews-header__points-indicator--active')
+      }else if (this.elementary > 0) {
+         pointer[this.elementary-1].classList.remove('reviews-header__points-indicator--active')
+         pointer[this.elementary].classList.add('reviews-header__points-indicator--active')
+      }
    }
 }
 
